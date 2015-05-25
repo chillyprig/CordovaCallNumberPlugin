@@ -79,9 +79,7 @@ public class CFCallNumber extends CordovaPlugin
                     Log.i(LOG_TAG, "restart app");
 
                     // restart app
-                    Intent i = cordova.getActivity().getBaseContext().getPackageManager()
-                            .getLaunchIntentForPackage(
-                                    getBaseContext().getPackageName());
+                    Intent i = cordova.getActivity().getBaseContext().getPackageManager().getLaunchIntentForPackage(cordova.getActivity().getBaseContext().getPackageName());
                     i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                     cordova.getActivity().startActivity(i);
 
