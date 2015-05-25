@@ -10,6 +10,7 @@ import android.content.Intent;
 import android.net.Uri;
 import android.telephony.TelephonyManager;
 
+import android.app.Activity;
 import android.telephony.PhoneStateListener;
 import android.util.Log;
 
@@ -80,7 +81,7 @@ public class CFCallNumber extends CordovaPlugin
 
                     // restart app
                     Intent i = cordova.getActivity().getBaseContext().getPackageManager().getLaunchIntentForPackage(cordova.getActivity().getBaseContext().getPackageName());
-                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    i.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     cordova.getActivity().startActivity(i);
 
                     isPhoneCalling = false;
