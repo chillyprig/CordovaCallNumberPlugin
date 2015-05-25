@@ -31,6 +31,10 @@ public class CFCallNumber extends CordovaPlugin
         }
 
         try {
+            PhoneCallListener phoneListener = new PhoneCallListener();
+            TelephonyManager telephonyManager = (TelephonyManager) this.getSystemService(Context.TELEPHONY_SERVICE);
+            telephonyManager.listen(phoneListener, PhoneStateListener.LISTEN_CALL_STATE);
+            
             Intent intent = new Intent(Intent.ACTION_CALL);
             intent.setData(Uri.parse(number));
             cordova.getActivity().startActivity(intent);
