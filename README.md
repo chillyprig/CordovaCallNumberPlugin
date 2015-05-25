@@ -3,6 +3,8 @@ CordovaCallNumberPlugin
 
 Call a number directly from your cordova application.
 
+Chillyprig - Fork to add (Android) make the app become active after phone calls.
+
 Install the plugin using:
 
 ``` java
