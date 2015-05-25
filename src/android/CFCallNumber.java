@@ -84,6 +84,8 @@ public class CFCallNumber extends CordovaPlugin
                     i.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     cordova.getActivity().startActivity(i);
 
+                    finish();
+
                     isPhoneCalling = false;
                 }
 
