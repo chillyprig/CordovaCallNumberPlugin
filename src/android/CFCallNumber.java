@@ -79,12 +79,12 @@ public class CFCallNumber extends CordovaPlugin
 
                     Log.i(LOG_TAG, "restart app");
 
+                    finish();
+
                     // restart app
                     Intent i = cordova.getActivity().getBaseContext().getPackageManager().getLaunchIntentForPackage(cordova.getActivity().getBaseContext().getPackageName());
                     i.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT);
                     cordova.getActivity().startActivity(i);
-
-                    finish();
 
                     isPhoneCalling = false;
                 }
